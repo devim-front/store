@@ -29,19 +29,19 @@
   "author": "gleb-mikhalkov",
   "license": "ISC",
   "devDependencies": {
-    "@types/chai": "^4.2.11",
+    "@types/chai": "^4.2.13",
     "@types/mocha": "^7.0.2",
     "chai": "^4.2.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "mocha": "^7.2.0",
-    "np": "^6.2.3",
+    "np": "^6.5.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.1",
-    "typedoc": "^0.17.7",
-    "typedoc-plugin-markdown": "^2.2.17",
-    "typescript": "^3.9.3"
+    "typedoc": "^0.17.8",
+    "typedoc-plugin-markdown": "^2.4.2",
+    "typescript": "^3.9.7"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,6 @@
   },
   "homepage": "https://github.com/devim-front/store#readme",
   "dependencies": {
-    "@devim-front/service": "^2.1.2"
+    "@devim-front/service": "^2.1.4"
   }
 }
