@@ -1,13 +1,7 @@
 import { FreeService } from '@devim-front/service';
 
-import { StoreEvents } from './StoreEvents';
-import { FreeStoreEvents } from './FreeStoreEvents';
-
 /**
- * Свободный сервис.
- *
- * @template E Коллекция событий свободного хранилища.
+ * Свободное хранилище. Свободное хранилище никак не контролирует количество
+ * своих экземпляров и способ их получения.
  */
-export class FreeStore<
-  E extends StoreEvents = FreeStoreEvents
-> extends FreeService<E> {}
+export class FreeStore extends FreeService {}

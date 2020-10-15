@@ -1,13 +1,7 @@
 import { LazyService } from '@devim-front/service';
 
-import { StoreEvents } from './StoreEvents';
-import { LazyStoreEvents } from './LazyStoreEvents';
-
 /**
- * Ленивое хранилище.
- *
- * @template E Коллекция событий хранилища.
+ * Ленивое хранилище. Ленивое хранилище может иметь лишь единственный экземпляр,
+ * который может быть получен с помощью статических методов get, with и use.
  */
-export class LazyStore<
-  E extends StoreEvents = LazyStoreEvents
-> extends LazyService<E> {}
+export class LazyStore extends LazyService {}

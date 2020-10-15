@@ -1,3 +1,2 @@
-import './FreeStore';
-import './LazyStore';
-import './StrictStore';
+import './FreeStore.test';
+import './LazyStore.test';
