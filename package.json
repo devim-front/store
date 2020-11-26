@@ -50,7 +50,9 @@
   },
   "homepage": "https://github.com/devim-front/store#readme",
   "dependencies": {
-    "@devim-front/service": "^3.0.1",
-    "mobx": "^6.0.1"
+    "@devim-front/service": "^3.0.1"
+  },
+  "peerDependencies": {
+    "mobx": "^6.0.x"
   }
 }
