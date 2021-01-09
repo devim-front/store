@@ -1,6 +1,6 @@
 import { assert } from 'chai';
 import { Pool } from '@devim-front/service';
-import { observable } from 'mobx';
+import { observable, isObservableProp } from 'mobx';
 
 import { FreeStore } from './FreeStore';
 import { LazyStore } from './LazyStore';
@@ -15,7 +15,7 @@ describe('reactive', () => {
     }
 
     const store = new Store();
-    assert.instanceOf(store, Store);
+    assert.isTrue(isObservableProp(store, 'foo'));
   });
 
   it('should works with LazyStore', () => {
@@ -28,6 +28,28 @@ describe('reactive', () => {
     const pool = new Pool();
     const store = Store.get(pool);
 
-    assert.instanceOf(store, Store);
+    assert.isTrue(isObservableProp(store, 'foo'));
+  });
+
+  it('should works even if the decorator is duplicated in a parent and a nested classes', () => {
+    @reactive
+    class ParentStore extends FreeStore {
+      @observable
+      public foo: string = 'foo';
+    }
+
+    @reactive
+    class NestedStore extends ParentStore {
+      @observable
+      public bar: string = 'bar';
+    }
+
+    @reactive
+    class FinalStore extends NestedStore {}
+
+    const store = new FinalStore();
+
+    assert.isTrue(isObservableProp(store, 'foo'));
+    assert.isTrue(isObservableProp(store, 'bar'));
   });
 });
