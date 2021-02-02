@@ -29,8 +29,10 @@
   "author": "gleb-mikhalkov",
   "license": "ISC",
   "devDependencies": {
+    "@devim-front/service": "^3.0.2",
     "@types/chai": "^4.2.13",
     "@types/mocha": "^7.0.2",
+    "@types/react": "^17.0.0",
     "chai": "^4.2.0",
     "husky": "^4.3.0",
     "mobx": "^6.0.4",
@@ -38,6 +40,7 @@
     "np": "^6.5.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
+    "react": "^17.0.1",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.7"
@@ -50,10 +53,10 @@
     "url": "https://github.com/devim-front/store/issues"
   },
   "homepage": "https://github.com/devim-front/store#readme",
-  "dependencies": {
-    "@devim-front/service": "^3.0.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "@devim-front/service": "^3.0.2",
+    "react": "^17.0.1",
     "mobx": "^6.0.x"
   }
 }
